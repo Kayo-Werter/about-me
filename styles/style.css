@@ -6,8 +6,18 @@
     --cor-secundaria: #F6F6F6;
     --cor-terciaria: #22D4FD;
     --cor-hover: #272727;
+    --cor-sol: #f39c12;;
     --fonte-principal: 'Krona One', sans-serif;
     --fonte-secundaria: 'Monteserrat', sans-serif;
+}
+
+.light {
+    --cor-principal: #F6F6F6;
+    --cor-secundaria: #000000;
+    --cor-terciaria: #227dfd;
+    --cor-hover: #272727;
+    --cor-sol: #000000;;
+
 }
 
 * {
@@ -70,11 +80,12 @@ body.dark {
   }
   
   .fa-sun {
-    color: #f39c12;
+    color: var(--cor-sol);
   }
 
 .cabecalho {
     padding: 2% 0 0 15%;
+    
 }
 
 .cabecalho__menu {
@@ -152,12 +163,8 @@ body.dark {
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
-    color: #F6F6F6;
+    color: var(--cor-secundaria);
     font-family: var(--fonte-secundaria);
-}
-
-.apresentacao__links .dark {
-    color: var(--cor-principal);
 }
 
 .apresentacao__links__navegacao:hover {

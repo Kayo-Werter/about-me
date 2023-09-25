@@ -1,4 +1,5 @@
  @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 :root {
     --cor-principal: #000000;
@@ -22,8 +23,55 @@ body {
     box-sizing: border-box;
     background-color: var(--cor-principal);
     color: var(--cor-secundaria);
-    
+    transition: background 0.2s linear;
 }
+
+body.dark {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 5px;
+    position: relative;
+    height: 24px;
+    width: 50px;
+    transform: scale(1.2);
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+  }
+  
+  .checkbox:checked + .label .ball {
+    transform: translateX(24px);
+  }
+  
+  .fa-moon {
+    color: #f1c40f;
+  }
+  
+  .fa-sun {
+    color: #f39c12;
+  }
 
 .cabecalho {
     padding: 2% 0 0 15%;
@@ -42,88 +90,6 @@ body {
     text-decoration: none;
 }
 
-/* Nada meu */
-
-.checkbox {
-    opacity: 0;
-    position: absolute;
-}
-
-.label {
-    width: 50px;
-    height: 29px;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 30px;
-    padding: 6px;
-    position: relative;
-}
-
-.switcher {
-    background-color: #fff;
-    position: absolute;
-    top: 5px;
-    left: 2px;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-}
-
-.moon {
-    color: #ffa502;
-}
-
-.sun {
-    color: #ff4757;
-}
-
-.checkbox:checked + .label .switcher {
-    transform: translateX(24px);
-}
-
-/* Dark theme starts*/
-body.dark {
-    background-color: #1e272e;
-}
-  
-body.dark .bar {
-    background-color: #fff;
-}
-  
-body.dark p {
-    color: #fff;
-}
-  
-body.dark h3 {
-    color: #fff;
-}
-  
-body.dark nav {
-    background-color: #1e272e;
-    box-shadow: 2px 3px 2px #111010;
-}
-  
-body.dark ul {
-    background-color: #1e272e;
-}
-  
-body.dark .name {
-    color: var(--primary-color);
-}
-  
-body.dark .role {
-    color: var(--secondary-color);
-}
-  
-body.dark footer {
-    color: #fff;
-    border-top: 1px solid #111010;
-    box-shadow: 0px -2px 3px #111010;
-}
-  /* Dark theme ends */
-  
 .titulo-destaque {
     color: var(--cor-terciaria);
 }
@@ -175,7 +141,6 @@ body.dark footer {
 }
 
 .apresentacao__links__navegacao {
-    /* background-color: #22D4FD; */
     display: flex;
     justify-content: center;
     gap: 16px;
@@ -191,9 +156,14 @@ body.dark footer {
     font-family: var(--fonte-secundaria);
 }
 
+.apresentacao__links .dark {
+    color: var(--cor-principal);
+}
+
 .apresentacao__links__navegacao:hover {
     background-color: var(--cor-hover);
 }
+
 
 .apresentacao__imagem {
     width: 50%;

@@ -4,26 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
-    <link rel="stylesheet" href="assets/css/simple-lightbox.min.css" />
     <link rel="stylesheet" href="styles/style.css">
-    <!-- Simple lightbox CSS -->
-    <link rel="stylesheet" href="assets/css/simple-lightbox.min.css" />
-
+    
 </head>
 <body>
     <header class="cabecalho">
         <nav class="cabecalho__menu">
             <a class="cabecalho__menu__link" href="index.html">Home</a>
             <a class="cabecalho__menu__link" href="about.html">Sobre Mim</a>
-            <!-- Dark/light theme switcher -->
-            <div class="theme-switch">
-                <input type="checkbox" class="checkbox" id="checkbox" />
-                <label for="checkbox" class="label">
-                <ion-icon name="partly-sunny-outline" class="sun"></ion-icon>
-                <ion-icon name="moon-outline" class="moon"></ion-icon>
-                <div class="switcher"></div>
-                </label>
-            </div>
+            <input type="checkbox" class="checkbox" id="chk">
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
         </nav>    
 
     </header>
@@ -53,17 +47,7 @@
     <footer class="rodape">
         <p>Desenvolvido por Kayo como material didático</p>
     </footer>
-
-    <!-- Web page script -->
-    <script src="assets/js/app.js"></script>
-
-    <!-- Ion icons CDN -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-
-    <!-- Simple lightbox -->
-    <script src="assets/js/simple-lightbox.min.js"></script>
-    <script>
-    var lightbox = new SimpleLightbox(".stars-gallery a");
-    </script>
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="assets/css/simple-lightbox.min.css" />
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Simple lightbox CSS -->
+    <link rel="stylesheet" href="assets/css/simple-lightbox.min.css" />
+
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre Mim</a>
+            <!-- Dark/light theme switcher -->
+            <div class="theme-switch">
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label for="checkbox" class="label">
+                <ion-icon name="partly-sunny-outline" class="sun"></ion-icon>
+                <ion-icon name="moon-outline" class="moon"></ion-icon>
+                <div class="switcher"></div>
+                </label>
+            </div>
+        </nav>    
+
+    </header>
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Back-end de qualidade!</strong></h1>
+            <p class="apresentacao__conteudo__texto">Olá! Sou Kayo, desenvolvedor Back-end com especialidade em <strong>Python</strong> Vamos conversar?</p>
+            <div class="apresentacao__links">
+                <h2 class="apresentacao__conteudo__subtitulo">Acesse minhas redes:</h2>
+                <a  class="apresentacao__links__navegacao" href="https://www.instagram.com/kayowerter/" target="_blank">
+                    <img src="assets/instagram.png" alt="Instagram">
+                    Instagram
+                </a>
+                <a class="apresentacao__links__navegacao" href="https://linkedin.com/in/kayowerter" target="_blank">
+                    <img src="assets/linkedin.png" alt="Linkedin">
+                    Linkedin
+                </a>
+                <a class="apresentacao__links__navegacao" href="https://github.com/Kayo-Werter" target="_blank">
+                    <img src="assets/github.png" alt="Github">
+                    Github
+                </a>
+            </div>
+
+        </section>
+        <img class="apresentacao__imagem" src="assets/foto.png" alt="foto kayo">
+    </main>
+    <footer class="rodape">
+        <p>Desenvolvido por Kayo como material didático</p>
+    </footer>
+
+    <!-- Web page script -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Ion icons CDN -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+    <!-- Simple lightbox -->
+    <script src="assets/js/simple-lightbox.min.js"></script>
+    <script>
+    var lightbox = new SimpleLightbox(".stars-gallery a");
+    </script>
+</body>
+</html>
